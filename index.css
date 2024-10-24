@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #cfe9f5, #e3f2fd);
+}
+
+#chat-container {
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    margin: 0;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#messages {
+    flex: 1; 
+    overflow-y : auto;
+    padding: 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: 80%;
+    word-wrap: break-word; 
+}
+
+.user {
+    background-color: #d1f1d1;
+    text-align: right;
+    align-self: flex-end; 
+}
+
+.alice {
+    background-color: #f1d1d1;
+    text-align: left;
+    align-self: flex-start; 
+}
+
+#input-container {
+    display: flex;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#sendButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#sendButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05); 
+}
+
+.message {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
